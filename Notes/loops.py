@@ -30,3 +30,8 @@ for name in names:
 nums = [3,653,854,62,68,548,6596535386407,586427,6653,539,757,3647]
 for num in nums:
     print(f"{num}-10 = {num-10}")
+
+# Iteration = repetition
+
+for i in range(20):
+    print(f"My code has iterated {i} times.")
