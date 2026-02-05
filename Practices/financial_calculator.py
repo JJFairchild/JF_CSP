@@ -1,8 +1,22 @@
 # JF Financial Calculator
-s=0
-for j in ["income", "rent/mortgage", "utilities cost", "groceries budget", "transport budget"]:
-    p=float(input(f"What is your monthly {j}? $"))
-    s+=p
-    if j=="income": i=p
-    print(f"Your {j} is {round(p/i*100,2)}% of your income.\n")
-print(f"You should be saving ${i/10} per month, which is 10% of your income.\n\nWith this budget plan, you will have {i*1.9-s} of spending money per month.")
+
+"""
+What is your monthly income: $3000
+What is your monthly rent/mortgage: $1200
+What is your monthly utilities: $200
+What is your monthly groceries: $250
+What is your monthly transportation: $500
+
+Your rent is $ 1200.00 and that is 40 % of your income.
+Your utilities are $ 200.00 and that is 7 % of your income.
+Your groceries are $ 250.00 and that is 8 % of your income.
+Your transportation is $ 500.00 and that is 17 % of your income.
+You should save $ 300.00 a month, that is 10 % of your income.
+You have $ 550.00 of spending money each month! 
+"""
+
+def g(p): return round(float(input(f"\nWhat is your monthly {p}? $")),2)
+def c(m,t): print(f"Your {m} is {g(m)/t*100}% of your income.")
+i=g("income")
+for m in ["rent/mortgage","utilities","groceries","transportation"]: c(m,i)
+print(f"You should save ${i/10} a month, that is 10% of your income.\nYou have ${i}")
