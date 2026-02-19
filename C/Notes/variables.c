@@ -3,14 +3,16 @@
 #include <stdio.h>
 
 int main() {
-    int num = 8;
-    float pi = 3.14159265358979323; 
-    char grade = 'A'; // single character uses single quotes
-    char name[] = "Nancy"; // string uses [] after variable name
+    int age;
+    printf("Tell me your age: ");
+    scanf("%d", &age);
 
-    printf("Working!\n");
-    printf("%d\n", num);
-    printf("The digits of pi are: %f\n", pi);
-    printf("Your name is %s and you are %d years old. You have an %c in programming. Pi is %f.", name, num, grade, pi);
+    char name[50];
+    printf("Tell me your name: ");
+    scanf("%s", &name);
+    
+    char grade = 'A'; // single character uses single quotes
+
+    printf("Your name is %s and you are %d years old. You have an %c in programming.", name, age, grade);
     return 0;
 }
