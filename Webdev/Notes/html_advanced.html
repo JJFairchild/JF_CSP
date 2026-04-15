@@ -3,11 +3,40 @@
     <head>
         <title>Notes on Advanced HTML</title>
         <meta charset="UTF-8">
+        <!--Embedded Style Sheets are good practice. They go inside the head tag.-->
+        <style>
+            *{
+                background-color: rgb(57, 46, 105);
+            }
+            p{
+                background-color: rgb(22, 95, 85);
+                text-align: center;
+            }
+            #ordered{
+                color:cornflowerblue;
+            }
+            .section-2{
+                font-family: papyrus, fantasy;
+                border: 3px solid white;
+            }
+            .odd{
+                color:orange;
+                background-color: bisque;
+                color:green;
+            }
+            h1{
+                font-size: 100px;
+            }
+            img{
+                width: 100%;
+            }
+        </style>
     </head>
     <body>
         <h1>Advanced HTML</h1>
+        <!--Inline style (bad syntax)-->
         <div style="background-color:blueviolet; height:100px; width: 100px">
-            <par>This is in a div!</par>
+            <p>This is in a div!</p>
         </div>
         <div id="ordered">
             <p>This is how you make an ordered list</p>
@@ -18,7 +47,7 @@
                 <li>Advanced Computer Programming (Programming 3)</li>
             </ol>
         </div>
-        <div id="unordered" style="font-family: papyrus;">
+        <div id="unordered" class="section-2">
             <p>This is how you make an unordered list</p>
             <ul style="list-style-type:circle">
                 <li>Apple</li>
@@ -29,6 +58,6 @@
             </ul>
         </div>
         <a href="https://www.w3schools.com/tags/tag_ul.asp" target="_blank">W3schools unordered lists</a>
-        <img src="https://www.earthdiver.com/cdn-cgi/image/width=4000,quality=75,format=auto/https://assets.earthdiver.com/media/media-2727684.jp?w=5246&h=2193&tick=1667491652923" alt="Mount Timpanogos" height="200px">
+        <img src="https://www.earthdiver.com/cdn-cgi/image/width=4000,quality=75,format=auto/https://assets.earthdiver.com/media/media-2727684.jp?w=5246&h=2193&tick=1667491652923" alt="Mount Timpanogos">
     </body>
 </html>
