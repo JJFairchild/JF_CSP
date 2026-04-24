@@ -54,6 +54,9 @@
                 width: 20%;
                 border: 5px solid greenyellow;
             }
+            #button{
+                text-align: center;
+            }
         </style>
         <script>
             function switchImg(){
@@ -63,7 +66,11 @@
                 document.getElementById("GDAd").src = "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/322170/header.jpg?t=1703006148"
             }
             function showDL(){
-                document.getElementById("button_wrapper").style.display = "block";
+                if(document.getElementById("button_wrapper").style.display == "none"){
+                    document.getElementById("button_wrapper").style.display = "block";
+                } else {
+                    document.getElementById("button_wrapper").style.display = "none";
+                }   
             }
         </script>
     </head>
@@ -112,7 +119,8 @@
             
 
             <div>
-                <button onclick="showDL()">Show the Demonlist!</button>
+                <p id="button"><button onclick="showDL()">Show the Demonlist!</button></p>
+            </div>
             
                 <div id="button_wrapper">
                     <h1>The Demonlist</h1>
