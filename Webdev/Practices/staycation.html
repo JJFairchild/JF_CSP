@@ -17,8 +17,9 @@
             }
             #bodycontainer{
                 background-color: rgb(222, 137, 25);
-                border: 5px rgb(83, 51, 8);
+                border: 7px rgb(83, 51, 8);
                 border-style: solid none;
+                padding: 4%
             }
             #largebox{
                 background-color:rgb(222, 137, 25);
@@ -39,9 +40,19 @@
             h2{
                 text-align: center;
             }
+            #ThorsHammer{
+                border: 5px solid rgb(83, 51, 8);
+                width: 75%;
+            }
+            #nightsky{
+                border: 5px solid rgb(8, 25, 83);
+                width: 50%
+            }
         </style>
         <script>
-
+            function switchImg(){
+                document.getElementById("GDAd").src = "https://sweetours.com/wp-content/uploads/2025/06/bryce-canyon-sunrise-hoodoos-sunrise-point.png"
+            }
         </script>
     </head>
     <body>
@@ -54,17 +65,26 @@
             <div class="category_wrapper">
                 <div class="column">
                     <h2>What is Bryce Canyon?</h2>
-                    <p></p>
+                    <p>Located in southwestern Utah, Bryce Canyon National Park is famous worldwide for its impressive collection of hoodoos. Formed by a process known as "frost wedging," these irregular, spire-shaped rock formations vary greatly in shape and size and are quite surreal to look at.</p>
+                    <br>
+                    <img src="https://geology.utah.gov/wp-content/uploads/02-07-172007.jpg" id="ThorsHammer">
+                    <h4>The most famous hoodoo in Bryce Canyon, known as Thor's Hammer for its unique shape.</h4>
                 </div>
                 <div class="column">
                     <h2>Why should I go?</h2>
                     <p>Bryce Canyon has all sorts of amazing things to see, like:</p>
                     <ul>
-                        <li>Reason!</li>
-                        <li>Reason!</li>
-                        <li>Reason!</li>
-                        <li>Reason!</li>
+                        <li>Stunning Hoodoos</li>
+                        <li>Natural Ampitheaters</li>
+                        <li>Hiking Trails</li>
+                        <li>Majestic Overlooks</li>
                     </ul>
+                    <p>Not to mention the amazing views of the sky:</p>
+                    <ul>
+                        <li>Sunrise Point is among the most beautiful places to watch the sun rise above the horizon; watching the red rocks catch the first light is truly wonderful.</li>
+                        <li>As a certified International Dark Sky park, Bryce Canyon offers views of the night sky that are hard to find anywhere else.</li>
+                    </ul>
+                    <img src="https://darksky.org/app/uploads/2019/08/19-10-BRCA-Certified-as-International-Dark-Sky-Park-Photo-Keith-Moore-scaled.jpg" id="nightsky">
                 </div>
             </div>
         </div>
