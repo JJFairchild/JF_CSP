@@ -5,23 +5,38 @@
     <head>
         <title>Bryce Canyon</title>
         <meta charset="UTF-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ranchers&display=swap" rel="stylesheet">
         <style>
+            html{
+                font-family: "Ranchers", sans-serif;
+                font-weight: 400;
+                font-style: normal;
+                letter-spacing: 1px;
+            }
             body{
                 margin:0px;
             }
-            #titlecontainer{
+            header{
                 background-image: url(https://ctfassets.ksldigital.com/0wjmk6wgfops/7INDnzEy2JQDt2O5FVWQAC/648aab91227856d23033c948111b8fce/Bryce_Canyon_amphitheater_AdobeStock_101654066.jpeg?w=1200&q=70);
                 background-repeat: no-repeat;
                 background-size: 100%;
                 padding:15%;
             }
-            #bodycontainer{
+            h1{
+                text-align: center;
+            }
+            h2{
+                text-align: center;
+            }
+            .bodycontainer{
                 background-color: rgb(222, 137, 25);
                 border: 7px rgb(83, 51, 8);
                 border-style: solid none;
                 padding: 4%
             }
-            #largebox{
+            .largebox{
                 background-color:rgb(222, 137, 25);
                 border: 7px solid rgb(83, 51, 8);
                 padding: 3%;
@@ -34,59 +49,62 @@
             .column {
                 flex: 1;
             }
-            h1{
-                text-align: center;
-            }
-            h2{
-                text-align: center;
-            }
             #ThorsHammer{
                 border: 5px solid rgb(83, 51, 8);
                 width: 75%;
             }
-            #nightsky{
-                border: 5px solid rgb(8, 25, 83);
+            #sunrise{
+                border: 5px solid rgb(83, 51, 8);
                 width: 50%
             }
         </style>
         <script>
             function switchImg(){
-                document.getElementById("GDAd").src = "https://sweetours.com/wp-content/uploads/2025/06/bryce-canyon-sunrise-hoodoos-sunrise-point.png"
+                document.getElementById("sunrise").src = "https://darksky.org/app/uploads/2019/08/19-10-BRCA-Certified-as-International-Dark-Sky-Park-Photo-Keith-Moore-scaled.jpg"
+            }
+            function unswitchImg(){
+                document.getElementById("sunrise").src = "https://sweetours.com/wp-content/uploads/2025/06/bryce-canyon-sunrise-hoodoos-sunrise-point.png"
             }
         </script>
     </head>
     <body>
-        <div id="titlecontainer">
-            <div id="largebox">
+        <header>
+            <div class="largebox">
                 <h1>The Amazing World of Bryce Canyon</h1>
             </div>
-        </div>
-        <div id="bodycontainer">
-            <div class="category_wrapper">
-                <div class="column">
-                    <h2>What is Bryce Canyon?</h2>
-                    <p>Located in southwestern Utah, Bryce Canyon National Park is famous worldwide for its impressive collection of hoodoos. Formed by a process known as "frost wedging," these irregular, spire-shaped rock formations vary greatly in shape and size and are quite surreal to look at.</p>
-                    <br>
-                    <img src="https://geology.utah.gov/wp-content/uploads/02-07-172007.jpg" id="ThorsHammer">
-                    <h4>The most famous hoodoo in Bryce Canyon, known as Thor's Hammer for its unique shape.</h4>
-                </div>
-                <div class="column">
-                    <h2>Why should I go?</h2>
-                    <p>Bryce Canyon has all sorts of amazing things to see, like:</p>
-                    <ul>
-                        <li>Stunning Hoodoos</li>
-                        <li>Natural Ampitheaters</li>
-                        <li>Hiking Trails</li>
-                        <li>Majestic Overlooks</li>
-                    </ul>
-                    <p>Not to mention the amazing views of the sky:</p>
-                    <ul>
-                        <li>Sunrise Point is among the most beautiful places to watch the sun rise above the horizon; watching the red rocks catch the first light is truly wonderful.</li>
-                        <li>As a certified International Dark Sky park, Bryce Canyon offers views of the night sky that are hard to find anywhere else.</li>
-                    </ul>
-                    <img src="https://darksky.org/app/uploads/2019/08/19-10-BRCA-Certified-as-International-Dark-Sky-Park-Photo-Keith-Moore-scaled.jpg" id="nightsky">
+        </header>
+        <main>
+            <div class="bodycontainer">
+                <div class="category_wrapper">
+                    <div class="column">
+                        <h2>What is Bryce Canyon?</h2>
+                        <p>Located in southwestern Utah, Bryce Canyon National Park is famous worldwide for its impressive collection of hoodoos. Formed by a process known as "frost wedging," these irregular, spire-shaped rock formations vary greatly in shape and size and are quite surreal to look at. Also, the views of the night and morning sky are clearer than nearly anywhere else, letting you see a sky full of stars every night.</p>
+                        <br>
+                        <img src="https://geology.utah.gov/wp-content/uploads/02-07-172007.jpg" id="ThorsHammer">
+                        <h4>The most famous hoodoo in Bryce Canyon, known as Thor's Hammer for its unique shape.</h4>
+                    </div>
+
+                    <div class="column">
+                        <h2>Why should I go?</h2>
+                        <p>Bryce Canyon has all sorts of amazing things to see, like:</p>
+                        <ul>
+                            <li>Stunning Hoodoos</li>
+                            <li>Natural Ampitheaters</li>
+                            <li>Hiking Trails</li>
+                            <li>Majestic Overlooks</li>
+                            <li>Serene Campsites</li>
+                        </ul>
+                        <p>Not to mention the amazing views of the sky:</p>
+                        <ul>
+                            <li>Sunrise Point is among the most beautiful places to watch the sun rise above the horizon; watching the red rocks catch the first light is truly wonderful.</li>
+                            <li>As a certified International Dark Sky park, Bryce Canyon offers views of the night sky that are hard to find anywhere else.</li>
+                        </ul>
+                        <img src="https://sweetours.com/wp-content/uploads/2025/06/bryce-canyon-sunrise-hoodoos-sunrise-point.png" id="sunrise" onmouseover="switchImg()" onmouseout="unswitchImg()">
+                    </div>
                 </div>
             </div>
-        </div>
+            <button>Click to take a closer look!</button>
+            <img src="https://i0.wp.com/www.brycecanyoncountry.com/wp-content/uploads/bryce-canyon-national-park_bryce-canyon-view.webp" id="canyon">
+        </main>
     </body>
 </html>
