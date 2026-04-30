@@ -36,6 +36,12 @@
                 border-style: solid none;
                 padding: 4%
             }
+            .extrascontainer{
+                background-image: url(https://i0.wp.com/www.brycecanyoncountry.com/wp-content/uploads/bryce-canyon-national-park_bryce-canyon-view.webp);
+                background-repeat: no-repeat;
+                background-size: 100%;
+                padding: 15%
+            }
             .largebox{
                 background-color:rgb(222, 137, 25);
                 border: 7px solid rgb(83, 51, 8);
@@ -49,6 +55,12 @@
             .column {
                 flex: 1;
             }
+            #closerlook{
+                display: none;
+            }
+            #closerbutton{
+                text-align: center;
+            }
             #ThorsHammer{
                 border: 5px solid rgb(83, 51, 8);
                 width: 75%;
@@ -57,6 +69,10 @@
                 border: 5px solid rgb(83, 51, 8);
                 width: 50%
             }
+            #towerbridge{
+                border: 5px solid rgb(83, 51, 8);
+                width: 50%;
+            }
         </style>
         <script>
             function switchImg(){
@@ -64,6 +80,10 @@
             }
             function unswitchImg(){
                 document.getElementById("sunrise").src = "https://sweetours.com/wp-content/uploads/2025/06/bryce-canyon-sunrise-hoodoos-sunrise-point.png"
+            }
+            function closerLook(){
+                document.getElementById("closerlook").style.display = "block";
+                document.getElementById("closerbutton").style.display = "none";
             }
         </script>
     </head>
@@ -103,8 +123,25 @@
                     </div>
                 </div>
             </div>
-            <button>Click to take a closer look!</button>
-            <img src="https://i0.wp.com/www.brycecanyoncountry.com/wp-content/uploads/bryce-canyon-national-park_bryce-canyon-view.webp" id="canyon">
+            <div class="extrascontainer">
+                <div class="largebox">
+                    <div id="closerbutton">
+                        <button onclick="closerLook()">Click to take a closer look!</button>
+                    </div>
+                    <div id="closerlook">
+                        <h2>Places to see</h2>
+                        <p>If you want to see Bryce's hoodoos up close, consider one of the many trails below the canyon rim!</p>
+                        <ul>
+                            <li>Navajo Loop - A 3-mile hike passing Thor's Hammer and neat rock formations.</li>
+                            <li>Wall Street - A dramatic section of the Navajo Loop featuring narrow passages between towering rock walls.</li>
+                            <li>Rim Trail - An easy, flat path connecting the viewpoints along the canyon rim.</li>
+                            <li>Fairlyland Loop Trail - A quieter 8-mile trail featuring unique formations like the Tower Bridge.</li>
+                        </ul>
+                        <img src="https://www.nps.gov/common/uploads/cropped_image/primary/98887CEC-CABD-07F7-20C3F14A85118405.jpg?width=1300&quality=90&mode=crop" id="towerbridge">
+                        <h4>The Tower Bridge, a unique rock formation named for its resemblance to the Tower Bridge in London.</h4>
+                    </div>
+                </div>
+            </div>
         </main>
     </body>
 </html>
