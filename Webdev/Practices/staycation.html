@@ -37,7 +37,7 @@
                 padding: 4%
             }
             .extrascontainer{
-                background-image: url(https://i0.wp.com/www.brycecanyoncountry.com/wp-content/uploads/bryce-canyon-national-park_bryce-canyon-view.webp);
+                background-image: url(https://embracesomeplace.com/wp-content/uploads/2020/09/DSC09426.jpg);
                 background-repeat: no-repeat;
                 background-size: 100%;
                 padding: 15%
@@ -82,8 +82,11 @@
                 document.getElementById("sunrise").src = "https://sweetours.com/wp-content/uploads/2025/06/bryce-canyon-sunrise-hoodoos-sunrise-point.png"
             }
             function closerLook(){
-                document.getElementById("closerlook").style.display = "block";
-                document.getElementById("closerbutton").style.display = "none";
+                if(document.getElementById("closerlook").style.display == "none"){
+                    document.getElementById("closerlook").style.display = "block";
+                } else {
+                    document.getElementById("closerlook").style.display = "none";
+                }
             }
         </script>
     </head>
